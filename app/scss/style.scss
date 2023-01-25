@@ -79,6 +79,7 @@
 		padding-left: 30px;
 		display: inline-block;
 		position: relative;
+
 		&::before {
 			content: '';
 			background-image: url(../images/envelope.svg);
@@ -139,9 +140,11 @@
 	&__menu-link {
 		color: #707070;
 	}
+
 	&__social-link {
 		padding-left: 28px;
 		position: relative;
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -151,24 +154,29 @@
 			height: 16px;
 		}
 	}
+
 	&__social-link--facebook::before {
 		background-image: url(../images/facebook.svg);
 	}
+
 	&__social-link--instagram::before {
 		width: 14px;
 		height: 14px;
 		top: 4px;
 		background-image: url(../images/instagram.svg);
 	}
+
 	&__social-link--pinterest::before {
 		background-image: url(../images/pinterest.svg);
 	}
+
 	&__social-link--whatsapp::before {
 		width: 14px;
 		height: 14px;
 		top: 4px;
 		background-image: url(../images/whatsapp.svg);
 	}
+
 	&__social-link--youtube::before {
 		width: 18px;
 		height: 12px;
@@ -200,9 +208,11 @@
 	padding-top: 40px;
 	box-shadow: -2px 3px 17px 0px #000;
 	transition: all .6s;
+
 	&.rightside-menu--close {
 		transform: translateX(500%)
 	}
+
 	&__close {
 		background-color: transparent;
 		border: none;
@@ -211,26 +221,45 @@
 		margin-left: 50px;
 		margin-bottom: 60px;
 	}
+
 	&__content {
 		text-align: center;
 		max-width: 485px;
 		margin: 0 auto;
 	}
+
 	&__logo {
 		display: inline-block;
 		margin-bottom: 40px;
 	}
+
 	&__title {
 		color: $title;
 		@extend %title-font;
 		font-size: 36px;
 		line-height: 51px;
+		position: relative;
+		margin-bottom: 17px;
+		padding-bottom: 17px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			max-width: 252px;
+			margin: 0 auto;
+			background: #6D7278;
+			height: 1px;
+		}
 	}
+
 	&__text {
 		margin-bottom: 75px;
 	}
+
 	&__images {
 		max-width: 485px;
 	}
 }
-
