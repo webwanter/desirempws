@@ -1,6 +1,13 @@
 html,
 body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 27px;
+	font-weight: 400;
 	height: 100%;
+	color: $default;
+	overflow-x: hidden;
+	min-width: 320px;
 }
 
 .wrapper {
@@ -17,7 +24,7 @@ body {
 }
 
 .container{
-  max-width: 1200px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
 }
