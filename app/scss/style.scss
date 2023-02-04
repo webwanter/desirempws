@@ -18,6 +18,10 @@
 		padding: 0;
 		cursor: pointer;
 	}
+
+	&__btn-menu {
+		display: none;
+	}
 }
 
 .logo {
@@ -269,12 +273,17 @@
 
 	&__list {
 		display: flex;
+		overflow-x: auto;
+	}
+
+	&__item {
+		position: relative;
+		padding-right: 8px;
 	}
 
 	&__item::after {
 		content: '/';
-		margin-left: -4px;
-		margin-right: 4px;
+		position: absolute;
 	}
 
 	&__item:last-child::after {
@@ -391,7 +400,7 @@
 		&:hover {
 			.collection__info {
 				opacity: 1;
-				transition: .5s
+				transition: all .5s;
 			}
 		}
 	}
@@ -472,7 +481,7 @@
 	}
 
 	&__text {
-		width: 540px;
+		max-width: 540px;
 	}
 }
 
@@ -485,6 +494,7 @@
 		color: $title;
 		font-size: 36px;
 		line-height: 51px;
+		margin-bottom: 40px;
 	}
 
 	&__items-box {
@@ -821,6 +831,10 @@
 .map {
 	margin-top: -53px;
 	margin-bottom: 50px;
+
+	iframe {
+		height: 578px;
+	}
 }
 
 .contact {
@@ -925,6 +939,7 @@
 }
 
 .contact-slider {
+	margin-bottom: 102px;
 	&__link {
 		position: relative;
 
@@ -939,6 +954,7 @@
 		width: 170px;
 		height: 170px;
 		object-fit: cover;
+		margin: 0 auto;
 	}
 
 	&__title {
@@ -949,17 +965,18 @@
 		top: 0;
 		bottom: 0;
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		background: rgba(#fff, .7);
 		color: $title;
 		@extend %title-font;
 		line-height: 22px;
-		padding: 0 6px;
+		padding: 0 22px;
 		text-align: center;
 		opacity: 0;
 	}
 }
+
 
 .aside {
 	width: 350px;
@@ -1393,12 +1410,14 @@
 			font-weight: 400;
 		}
 	}
+
 	&__form-label {
 		width: 100%;
 		margin-bottom: 20px;
 		font-size: 14px;
 		color: #a1a1a1;
 	}
+
 	&__form-btn {
 		color: #FFF;
 		border-radius: 21px;
@@ -1409,3 +1428,5 @@
 		cursor: pointer;
 	}
 }
+
+@import 'media';
